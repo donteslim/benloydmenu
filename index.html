@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      margin: 0;
+      padding: 20px;
+      color: #000;
+    }
+    h5 {
+      text-align: center;
+      color: #222;
+      margin-bottom: 30px;
+    }
+    /* Tabs Navigation */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .tab-button {
+      background: #eee;
+      border: none;
+      padding: 12px 20px;
+      margin: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .tab-button.active {
+      background: #000000;
+      color: #fff;
+      font-weight: bold;
+    }
+    /* Tables */
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.4s;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    table {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th {
+      background: #ee1c25;
+      color: white;
+      font-size: 18px;
+      padding: 12px;
+      text-align: left;
+    }
+    td {
+      padding: 12px;
+      border-bottom: 1px solid #eee;
+      font-size: 16px;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .price {
+      text-align: right;
+      font-weight: bold;
+      color: #444;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h5>Click On Any Menu Section - Scroll Down To See Prices</h5>
+
+  <!-- Tab Navigation -->
+  <div class="tabs">
+    <button class="tab-button active" onclick="openTab(event, 'Beers')">Beers</button>
+    <button class="tab-button" onclick="openTab(event, 'Soft Drinks')">Soft Drinks</button>
+    <button class="tab-button" onclick="openTab(event, 'Cocktails')">Cocktails</button>
+    <button class="tab-button" onclick="openTab(event, 'Mocktails')">Mocktails</button>
+    <button class="tab-button" onclick="openTab(event, 'Wines')">Wines</button>
+    <button class="tab-button" onclick="openTab(event, 'Bitters')">Bitters</button>
+    <button class="tab-button" onclick="openTab(event, 'Spirits')">Spirits</button>
+    <button class="tab-button" onclick="openTab(event, 'Energy Drinks')">Energy Drinks</button>
+    <button class="tab-button" onclick="openTab(event, 'Whiskey')">Whiskey</button>
+    <button class="tab-button" onclick="openTab(event, 'Peppersoup')">Peppersoup</button>
+    <button class="tab-button" onclick="openTab(event, 'Swallow')">Swallow</button>
+    <button class="tab-button" onclick="openTab(event, 'Soup')">Soup</button>
+    <button class="tab-button" onclick="openTab(event, 'Food')">Food</button>
+    <button class="tab-button" onclick="openTab(event, 'Delicacies')">Delicacies</button>
+    <button class="tab-button" onclick="openTab(event, 'Protein')">Protein</button>
+    <button class="tab-button" onclick="openTab(event, 'Smokes')">Smokes</button>
+    <button class="tab-button" onclick="openTab(event, 'Grill')">Grill</button>
+  </div>
+
+  <!-- Beers -->
+  <div id="Beers" class="tab-content active">
+    <table>
+      <tr><th>Beer</th><th>Price</th></tr>
+      <tr><td>Big Heneiken</td><td class="price">N2000</td></tr>
+      <tr><td>Can Heneiken</td><td class="price">N1500</td></tr>
+      <tr><td>Gulder</td><td class="price">N1500</td></tr>
+      <tr><td>Goldberg</td><td class="price">N1500</td></tr>
+      <tr><td>Big Stout</td><td class="price">N1500</td></tr>
+      <tr><td>Medium Stout</td><td class="price">N2500</td></tr>
+      <tr><td>Small Stout</td><td class="price">N2000</td></tr>
+      <tr><td>Trophy</td><td class="price">N1500</td></tr>
+      <tr><td>Big Smirnoff ice</td><td class="price">N2000</td></tr>
+      <tr><td>Small Smirnoff ice</td><td class="price">N1500</td></tr>
+
+      <tr><td>Origin Beer</td><td class="price">N2000</td></tr>
+      <tr><td>Big legend Stout</td><td class="price">N2000</td></tr>
+      <tr><td>Small Legend Stout</td><td class="price">N1500</td></tr>
+      <tr><td>Star Radler</td><td class="price">N1500</td></tr>
+      <tr><td>Tiger Beer</td><td class="price">N1500</td></tr>
+      <tr><td>Desperdos</td><td class="price">N1500</td></tr>
+      <tr><td>Goldberg Black</td><td class="price">N1500</td></tr>
+      <tr><td>33 Export</td><td class="price">N1500</td></tr>
+      <tr><td>Budweiser</td><td class="price">N2000</td></tr>
+      <tr><td>Castle Lite</td><td class="price">N1500</td></tr>
+
+      <tr><td>Flying Fish</td><td class="price">N1500</td></tr>
+      <tr><td>Hero Beer</td><td class="price">N1500</td></tr>
+      <tr><td>Life</td><td class="price">N1500</td></tr>
+      <tr><td>Starlite</td><td class="price">N1000</td></tr>
+      <tr><td>Legend Twist</td><td class="price">N1500</td></tr>
+      <tr><td>Smirnoff Double Black</td><td class="price">N2000</td></tr>
+
+      <tr><td>Can Stout</td><td class="price">N1500</td></tr>
+      <tr><td>Can Smirnoff</td><td class="price">N1500</td></tr>
+      <tr><td>Guinness Smooth</td><td class="price">N1500</td></tr>
+      <tr><td>Medium Heineken</td><td class="price">N1500</td></tr>
+    </table>
+  </div>
+
+  
+  <!-- Soft Drinks -->
+  <div id="Soft Drinks" class="tab-content">
+    <table>
+      <tr><th>Soft Drinks</th><th>Price</th></tr>
+      <tr><td>Maltina</td><td class="price">N1000</td></tr>
+      <tr><td>Malta Guinness</td><td class="price">N1000</td></tr>
+      <tr><td>Amstel Malta</td><td class="price">N1000</td></tr>
+      <tr><td>Fayrouz</td><td class="price">N1000</td></tr>
+      
+      <tr><td>Schweppes</td><td class="price">N1000</td></tr>
+      <tr><td>Hollandia</td><td class="price">N2500</td></tr>
+      <tr><td>Chivita</td><td class="price">N2500</td></tr>
+      <tr><td>5 Alive</td><td class="price">N2000</td></tr>
+
+      <tr><td>Soda Water</td><td class="price">N1000</td></tr>
+      <tr><td>Teem Bitter Lemon</td><td class="price">N1000</td></tr>
+      <tr><td>Coke</td><td class="price">N1000</td></tr>
+      <tr><td>Water</td><td class="price">N500</td></tr>
+
+      <tr><td>Fanta</td><td class="price">N1000</td></tr>
+      <tr><td>Sprite</td><td class="price">N1000</td></tr>
+      <tr><td>Pepsi</td><td class="price">N1000</td></tr>
+
+    </table>
+  </div>
+
+<!-- Cocktails -->
+  <div id="Cocktails" class="tab-content">
+    <table>
+      <tr><th>Cocktail</th><th>Price</th></tr>
+      <tr><td>Long Island</td><td class="price">N5000</td></tr>
+      <tr><td>Tequila Sunrise</td><td class="price">N5000</td></tr>
+      <tr><td>Sex On The Beach</td><td class="price">N5000</td></tr>
+      <tr><td>Pinacolada</td><td class="price">N5000</td></tr>
+      <tr><td>Strawberry Magarita</td><td class="price">N5000</td></tr>
+    </table>
+  </div>
+
+<!-- Mocktails -->
+  <div id="Mocktails" class="tab-content">
+    <table>
+      <tr><th>Mocktails</th><th>Price</th></tr>
+      <tr><td>Chapman</td><td class="price">N3000</td></tr>
+      <tr><td>Virgin Sunset</td><td class="price">N4000</td></tr>
+      <tr><td>Virgin Colada</td><td class="price">N5000</td></tr>
+      <tr><td>Sweet Strawberry Frozen</td><td class="price">N5000</td></tr>
+    </table>
+  </div>
+
+<!-- Wines -->
+  <div id="Wines" class="tab-content">
+    <table>
+      <tr><th>Wines</th><th>Price</th></tr>
+      <tr><td>Four Cousin</td><td class="price">N12,000</td></tr>
+      <tr><td>4th Street</td><td class="price">N12,000</td></tr>
+      <tr><td>B&G</td><td class="price">N12,000</td></tr>
+      <tr><td>Carlo Rossi</td><td class="price">N15,000</td></tr>
+      <tr><td>Amabile Rossa</td><td class="price">N15,000</td></tr>
+      <tr><td>Don Paloma</td><td class="price">N12,000</td></tr>
+      <tr><td>Aznauri</td><td class="price">N20,000</td></tr>
+      <tr><td>Lamothe Parrot</td><td class="price">N15,000</td></tr>
+      <tr><td>Martini</td><td class="price">N20,000</td></tr>
+      <tr><td>Bacchus</td><td class="price">N20,000</td></tr>
+      <tr><td>Bron de Valls</td><td class="price">N10,000</td></tr>
+      <tr><td>Baron Romero</td><td class="price">N10,000</td></tr>
+      <tr><td>Castillo</td><td class="price">N12,000</td></tr>
+      <tr><td>Dorado</td><td class="price">N12,000</td></tr>
+      <tr><td>Toma Toma</td><td class="price">N10,000</td></tr>
+      <tr><td>Captain Jack</td><td class="price">N8000</td></tr>
+    </table>
+  </div>
+
+<!-- Bitters -->
+  <div id="Bitters" class="tab-content">
+    <table>
+      <tr><th>Bitters</th><th>Price</th></tr>
+      <tr><td>Origin Pet</td><td class="price">N2000</td></tr>
+      <tr><td>Big Long Jack</td><td class="price">N8000</td></tr>
+      <tr><td>Small Long Jack</td><td class="price">N1500</td></tr>
+      <tr><td>Coco Samba</td><td class="price">N800</td></tr>
+      <tr><td>Jekanmo</td><td class="price">N800</td></tr>
+      <tr><td>Ace Bitters</td><td class="price">N1000</td></tr>
+    </table>
+  </div>
+
+<!-- Spirits -->
+  <div id="Spirits" class="tab-content">
+    <table>
+      <tr><th>Food</th><th>Price</th></tr>
+      <tr><td>Big Gordon's</td><td class="price">N15000</td></tr>
+      <tr><td>Medium Gordon's</td><td class="price">N6000</td></tr>
+      <tr><td>Small Gordons's</td><td class="price">N3000</td></tr>
+      <tr><td>Big Smirnoff Vodka</td><td class="price">--</td></tr>
+      <tr><td>Medium Smirnoff Vodka</td><td class="price">--</td></tr>
+      <tr><td>Small Smirnoff Vodka</td><td class="price">--</td></tr>
+      <tr><td>Sierra Tequilla</td><td class="price">N25000</td></tr>
+      <tr><td>Sir Edwards</td><td class="price">N15000</td></tr>
+      <tr><td>Martell Blue Swift</td><td class="price">N120000</td></tr>
+      <tr><td>Martell VS</td><td class="price">N50000</td></tr>
+      <tr><td>Hennessey</td><td class="price">N75000</td></tr>
+      <tr><td>Remy Martin</td><td class="price">N125000</td></tr>
+      <tr><td>St. Remy</td><td class="price">N110000</td></tr>
+    </table>
+  </div>
+
+<!-- Energy Drinks -->
+  <div id="Energy Drinks" class="tab-content">
+    <table>
+      <tr><th>Energy Drink</th><th>Price</th></tr>
+      <tr><td>Red Bull</td><td class="price">N2500</td></tr>
+      <tr><td>Climax</td><td class="price">N2000</td></tr>
+      <tr><td>Black Bullet</td><td class="price">N2500</td></tr>
+      <tr><td>Fearless</td><td class="price">N1000</td></tr>
+      <tr><td>Monster</td><td class="price">N2000</td></tr>
+      <tr><td>Ginger Shot</td><td class="price">N1500</td></tr>
+      <tr><td>Power Horse</td><td class="price">N2000</td></tr>
+    </table>
+  </div>
+
+
+<!-- Whiskey -->
+  <div id="Whiskey" class="tab-content">
+    <table>
+      <tr><th>Whiskey</th><th>Price</th></tr>
+      <tr><td>Jack Daniels</td><td class="price">N40000</td></tr>
+      <tr><td>William Lawson</td><td class="price">N20000</td></tr>
+      <tr><td>Black Label</td><td class="price">N55000</td></tr>
+      <tr><td>Jameson Green</td><td class="price">N35000</td></tr>
+      <tr><td>Jameson Black</td><td class="price">N55000</td></tr>
+      <tr><td>Big Best Whisky</td><td class="price">N10000</td></tr>
+      <tr><td>Small Best Whisky</td><td class="price">N2500</td></tr>
+      <tr><td>Best Cream</td><td class="price">N3000</td></tr>
+      <tr><td>Blue Label</td><td class="price">--</td></tr>
+      <tr><td>Gold Label</td><td class="price">--</td></tr>
+    </table>
+  </div>
+
+<!-- Peppersoup -->
+  <div id="Peppersoup" class="tab-content">
+    <table>
+      <tr><th>Peppersoup</th><th>Price</th></tr>
+      <tr><td>Catfish Peppersoup</td><td class="price">N15000</td></tr>
+      <tr><td>Goatmeat Peppersoup</td><td class="price">N4500</td></tr>
+      <tr><td>Cowtail Peppersoup</td><td class="price">N4500</td></tr>
+      <tr><td>Chicken Peppersoup</td><td class="price">N4500</td></tr>
+      <tr><td>Turkey Peppersoup</td><td class="price">N5000</td></tr>
+      <tr><td>Assorted</td><td class="price">N2500</td></tr>
+    </table>
+  </div>
+
+<!-- Swallow -->
+  <div id="Swallow" class="tab-content">
+    <table>
+      <tr><th>Swallow</th><th>Price</th></tr>
+      <tr><td>Eba</td><td class="price">N1000</td></tr>
+      <tr><td>Semovita</td><td class="price">N1000</td></tr>
+      <tr><td>Wheat</td><td class="price">N1000</td></tr>
+      <tr><td>Poundo Yam</td><td class="price">N1000</td></tr>
+    </table>
+  </div>
+
+
+<!-- Soup -->
+  <div id="Soup" class="tab-content">
+    <table>
+      <tr><th>Soup</th><th>Price</th></tr>
+      <tr><td>Afang Soup</td><td class="price">N1500</td></tr>
+      <tr><td>Egusi Soup</td><td class="price">N1500</td></tr>
+      <tr><td>Ogbono Soup</td><td class="price">N1500</td></tr>
+      <tr><td>Vegetable Soup</td><td class="price">N1500</td></tr>
+      <tr><td>Okro Soup</td><td class="price">N1500</td></tr>
+      <tr><td>White Soup</td><td class="price">N1500</td></tr>
+    </table>
+  </div>
+
+<!-- Food -->
+  <div id="Food" class="tab-content">
+    <table>
+      <tr><th>Food</th><th>Price</th></tr>
+      <tr><td>White Rice</td><td class="price">N1500</td></tr>
+      <tr><td>Noodle</td><td class="price">N1500</td></tr>
+      <tr><td>Beans</td><td class="price">N1000</td></tr>
+      <tr><td>Fried Yam</td><td class="price">N1500</td></tr>
+      <tr><td>Boiled Yam</td><td class="price">N1500</td></tr>
+      <tr><td>Boiled Egg</td><td class="price">N1000</td></tr>
+      <tr><td>Fried Egg</td><td class="price">N1000</td></tr>
+    </table>
+  </div>
+
+<!-- Delicacies -->
+  <div id="Delicacies" class="tab-content">
+    <table>
+      <tr><th>Food</th><th>Price</th></tr>
+      <tr><td>Isiewu</td><td class="price">N12000</td></tr>
+      <tr><td>Nkwobi</td><td class="price">N4500</td></tr>
+      <tr><td>Peppered Beef</td><td class="price">N2500</td></tr>
+      <tr><td>Peppered Ponmo</td><td class="price">N2000</td></tr>
+      <tr><td>Peppered Cowtail</td><td class="price">N4500</td></tr>
+      <tr><td>Peppered Goatmeat</td><td class="price">N4500</td></tr>
+      <tr><td>Peppered Turkey</td><td class="price">N5500</td></tr>
+      <tr><td>Peppered Snail</td><td class="price">N15000</td></tr>
+      <tr><td>Peppered Chicken</td><td class="price">N4500</td></tr>
+    </table>
+  </div>
+
+<!-- Protein -->
+  <div id="Protein" class="tab-content">
+    <table>
+      <tr><th>Protein</th><th>Price</th></tr>
+      <tr><td>Goat Meat</td><td class="price">N4000</td></tr>
+      <tr><td>Beef</td><td class="price">N3000</td></tr>
+      <tr><td>Chicken</td><td class="price">N4000</td></tr>
+      <tr><td>Turkey</td><td class="price">N4500</td></tr>
+    </table>
+  </div>
+
+<!-- Smokes -->
+  <div id="Smokes" class="tab-content">
+    <table>
+      <tr><th>Smokes</th><th>Price</th></tr>
+      <tr><td>Esse Change</td><td class="price">N2000</td></tr>
+      <tr><td>Benson Switch</td><td class="price">N2000</td></tr>
+      <tr><td>Brown Benson</td><td class="price">N2000</td></tr>
+      <tr><td>Dunhill</td><td class="price">N2000</td></tr>
+      <tr><td>Chesterfield</td><td class="price">N2000</td></tr>
+      <tr><td>Shisha</td><td class="price">N5000</td></tr>
+    </table>
+  </div>
+
+<!-- Grill -->
+  <div id="Grill" class="tab-content">
+    <table>
+      <tr><th>Grill</th><th>Price</th></tr>
+      <tr><td>Chicken</td><td class="price">N4500</td></tr>
+      <tr><td>Turkey</td><td class="price">N5500</td></tr>
+      <tr><td>Chips</td><td class="price">N1500</td></tr>
+      <tr><td>Catfish</td><td class="price">N16000</td></tr>
+      <tr><td>Crocker Fish</td><td class="price">N10000</td></tr>
+    </table>
+  </div>
+
+
+
+
+
+
+
+  <script>
+    function openTab(evt, tabId) {
+      // Hide all tab content
+      const contents = document.querySelectorAll(".tab-content");
+      contents.forEach(content => content.classList.remove("active"));
+      
+      // Remove active class from buttons
+      const buttons = document.querySelectorAll(".tab-button");
+      buttons.forEach(btn => btn.classList.remove("active"));
+
+      // Show the selected tab
+      document.getElementById(tabId).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+  </script>
+</body>
+</html>
